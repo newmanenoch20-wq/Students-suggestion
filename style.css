@@ -59,20 +59,7 @@ footer {
         margin: 5px 0;
     }
 }
-h1 {
-  animation: slideIn 1.5s ease-out;
-}
 
-@keyframes slideIn {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 /* Page loads smoothly */
 body {
   animation: pageFade 1.5s ease-in;
