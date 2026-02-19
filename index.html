@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SRC Transparency Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>SRC Transparency Portal</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Suggestion Box</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Financial Summary</h2>
+
+    <p><strong>Total Funds Received:</strong> GHS 5,000</p>
+    <p><strong>Total Funds Spent:</strong> GHS 3,200</p>
+    <p><strong>Current Balance:</strong> GHS 1,800</p>
+
+    <canvas id="financeChart" width="400" height="200"></canvas>
+</section>
+
+<footer>
+    <p>© 2026 SRC Transparency Initiative</p>
+</footer>
+
+<script>
+    const ctx = document.getElementById('financeChart').getContext('2d');
+    const financeChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Received', 'Spent', 'Balance'],
+            datasets: [{
+                label: 'GHS',
+                data: [5000, 3200, 1800],
+                backgroundColor: ['green', 'red', 'blue']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
